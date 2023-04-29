@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {%load static%}
+    <div class="contenedor-aboutme">
+        <div class="contenedor-chico">
+            <div class="imagen-izq">
+                <img src="{%static 'img/sobre_nosotros.png'%}" style="height: 300px; border: 2px solid black">
+            </div>
+            <div class="text-der">
+                <div>
+                    <p style="font-size: 22px; margin:0px; margin-bottom:20px">ACERCA DE NOSOTROS</p>
+                    <hr style="border: 1px solid white; margin:0px;">
+                    <br>
+                    <p>Hola! Somos un grupo de vecinos del Barrio Parque con ganas de saber todos los chismes...
+                    <br><br>Somos apasionados de lo que hacemos, por lo cual mantenemos completa discrecion de los usuarios. Cuentennos todo!! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
