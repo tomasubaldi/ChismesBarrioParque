@@ -24,7 +24,7 @@ El usuario podrá realizar esta serie de acciones:
 - Cambiar su contraseña
 - Cerrar Sesión
 
-Aclaración: Solamente se podrá editar el perfil si se está logueado con esa cuenta, a menos de que sea un administrador.
+Aclaración: Solamente se podrá editar el perfil si se está logueado con esa cuenta.
 
 ## Tecnología Usada
 
