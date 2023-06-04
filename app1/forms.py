@@ -11,7 +11,7 @@ class Form_Blog(forms.Form):
     
     autor = forms.CharField(label='', max_length=50, widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Autor'}))
     
-    imagen = forms.ImageField()
+    imagen = forms.ImageField(label='', required=False, widget=forms.ClearableFileInput(attrs={'class': 'form-control'}))
     
 class Edit_Form_Blog(forms.Form):
     
@@ -21,6 +21,7 @@ class Edit_Form_Blog(forms.Form):
     
     cuerpo = forms.CharField(label='', widget = forms.Textarea(attrs={'class': 'form-control', 'placeholder':'Texto'}))
     
+    imagen = forms.ImageField()
 class Form_Comentario(forms.Form):
     
     nombre = forms.CharField(label='', max_length=100, widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Nombre'}))

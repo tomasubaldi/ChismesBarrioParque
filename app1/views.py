@@ -320,6 +320,9 @@ def edit_blogs(request, id):
             blog.subtitulo = info["subtitulo"]
             blog.cuerpo = info["cuerpo"]
             
+            imagen = form.cleaned_data.get('imagen')
+            if imagen:
+                blog.imagen = imagen
             blog.save()
             
             info = Blog.objects.all()
@@ -342,7 +345,7 @@ def edit_blogs(request, id):
     contexto={
         "blogs": info,
         "nombre_completo": nombre,
-        "form": Edit_Form_Blog(initial={'titulo': data_blog.titulo, 'subtitulo': data_blog.subtitulo, 'cuerpo': data_blog.cuerpo})
+        "form": Edit_Form_Blog(initial={'titulo': data_blog.titulo, 'subtitulo': data_blog.subtitulo, 'cuerpo': data_blog.cuerpo, 'imagen': data_blog.imagen}),
     }    
     
     return render(request, "app1/edit-blog.html", context=contexto)
